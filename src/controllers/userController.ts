@@ -47,7 +47,7 @@ export const addFriend = async (req: Request, res: Response) => {
         }
         const friendship = await User.findOneAndUpdate(
             { _id: req.params.userId },
-            { $push: { friends: req.params.friendId } }
+            { $addToSet: { friends: req.params.friendId } }
         );
         if (!friendship) {
             return res.status(404).json({ message: 'Invalid User!' });
