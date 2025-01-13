@@ -8,14 +8,14 @@ interface IThought extends Document {
 };
 
 interface IReaction extends Document {
-    reactionID: ObjectId;
+    reactionId: ObjectId;
     reactionBody: string;
     username: string;
     createdAt: Date;
 };
 const reactionSchema = new Schema<IReaction>(
     {
-        reactionID: {
+        reactionId: {
             type: Schema.Types.ObjectId,
             default: () => new Types.ObjectId,
         },
