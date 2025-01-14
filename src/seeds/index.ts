@@ -1,6 +1,6 @@
-import db from '../config/connection'
-import { Thought, User } from '../models';
-import { seedData } from './data'
+import db from '../config/connection.js'
+import { Thought, User } from '../models/index.js';
+import { seedData } from './data.js'
 
 try {
     await db();
